@@ -1,5 +1,6 @@
 import { renderOrderSummary } from './checkOut/orderSummary.js';
 import { renderPaymentSummary } from './checkOut/paymentSummary.js';
+import { renderCheckoutHeader } from './checkOut/checkoutHeader.js';
 // import '../data/cart-class.js';
 // import '../data/backend-practice.js';
 import { loadProducts, loadProductsFetch } from '../data/products.js';
@@ -26,7 +27,7 @@ async function loadPage()     {
             console.log('Unexpected error, please try after sometime');
       }
       
-      
+      renderCheckoutHeader();
       renderOrderSummary();
       renderPaymentSummary();
 
